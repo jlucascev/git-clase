@@ -34,18 +34,18 @@ input[type=button], input[type=submit], input[type=file] {
   cursor: pointer;
 }
 
-}
-@if 
-
-    
+ 
 </style>
 
 <body>
 <div class="login">
     
 <center>
+    @if( ! empty($msg))
+    <p>{{$msg}}</p>
+@endif  
     
-<form action="" method="POST" class="formulario">
+<form action="upload" method="POST" class="formulario">
 
     @csrf
 <input type="file" name="name" placeholder="Input your name">
