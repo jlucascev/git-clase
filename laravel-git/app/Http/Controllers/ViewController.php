@@ -13,7 +13,8 @@ class ViewController extends Controller
     }
     public function getFormView(){
     	//vista formulario
-    	return "getFormView";
+    	$params = ["msg" => ($mensaje ? $mensaje : "")];
+    	return view('welcome',$params);
     }
 }
 
