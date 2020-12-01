@@ -11,7 +11,7 @@ class ViewController extends Controller
     	//vista llistas
     	return "getListView";
     }
-    public function getFormView(){
+    public function getFormView($mensaje = null){
     	//vista formulario
     	$params = ["msg" => ($mensaje ? $mensaje : "")];
     	return view('welcome',$params);
