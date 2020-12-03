@@ -16,9 +16,7 @@ use App\Http\Controller\ViewController;
 
 //En  base a Modelo Vista Controlador.
 
-//Ruta básica carga la página de formulario o HOME
 
-Route::get('/','ViewController@getFormView');
 
 //Ruta del formulario en método post para obtener la información del mismo y almacenarla
 
@@ -27,6 +25,10 @@ Route::post('/upload','FileController@uploadFile');
 //Ruta que obtiene la funcion del controlador que pinta la vista
 
 Route::get('/lista','ViewController@getListView');
+
+//Ruta básica carga la página de formulario o HOME
+
+Route::get('/{msg?}','ViewController@getFormView')->name('home');
 
 //Ruta que descarga la información de la lista.
 
